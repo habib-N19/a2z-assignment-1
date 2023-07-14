@@ -13,6 +13,10 @@ const NavBar = () => {
     {
       url: '/task3',
       title: 'Task 3'
+    },
+    {
+      url: '/technologies',
+      title: 'Used Technologies'
     }
   ]
 

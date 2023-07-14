@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-// import axios from 'axios'
 import { createContext, useState } from 'react'
 import useUsersData from '../hooks/useUsersData'
 
@@ -9,7 +8,6 @@ const CirclesProvider = ({ children }) => {
   const [circles, setCircles] = useState([
     { id: 1, backgroundColor: '#FFFF00', counter: 0 }
   ])
-  //   const [usersData, setUsersData] = useState([])
 
   const randomColor = () => {
     const char = 'ABCDEF0123456789'
@@ -35,15 +33,7 @@ const CirclesProvider = ({ children }) => {
   }
   const handleDuplicate = circle => {
     if (circles.length < 10) {
-      //   try {
-      //     await axios
-      //       .get('https://random-data-api.com/api/v2/users')
-      //       .then(res => {
-      //         const newUserData = res.data
-      //         setUsersData(prevUsersData => [...prevUsersData, newUserData])
-      //         console.log(newUserData)
-      //         console.log(usersData)
-      //       })
+   
       refetch()
 
       const newCircle = {
@@ -52,9 +42,7 @@ const CirclesProvider = ({ children }) => {
         counter: 0
       }
       setCircles(prevCircles => [...prevCircles, newCircle])
-      //   } catch (error) {
-      //     console.error('Error')
-      //   }
+     
     }
   }
   const circleInfo = {

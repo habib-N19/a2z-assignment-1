@@ -3,6 +3,7 @@ import Main from '../layout/Main'
 import Task1 from '../tasks/task1/Task1'
 import Task2 from '../tasks/task2/Task2'
 import SingleUser from '../tasks/task2/SingleUser'
+import UsedTechnologies from '../tasks/UsedTechnologies'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/task2/:id',
         element: <SingleUser></SingleUser>
+      },
+      {
+        path: '/technologies',
+        element: <UsedTechnologies></UsedTechnologies>
       }
     ]
   }
