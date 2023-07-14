@@ -4,7 +4,7 @@ import { CirclesContext } from '../../providers/CircleProvider'
 const Task1 = () => {
   const { circles, handleCounter, handleDuplicate } = useContext(CirclesContext)
   return (
-    <div className='flex flex-wrap items-center justify-center w-screen h-screen'>
+    <div className='flex flex-wrap items-center justify-center h-screen max-w-screen'>
       {circles.map(circle => (
         <div
           key={circle.id}

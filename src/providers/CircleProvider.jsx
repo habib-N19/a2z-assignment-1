@@ -5,7 +5,7 @@ import useUsersData from '../hooks/useUsersData'
 
 export const CirclesContext = createContext()
 const CirclesProvider = ({ children }) => {
-  const [, refetch] = useUsersData()
+  const [usersData, refetch] = useUsersData()
   const [circles, setCircles] = useState([
     { id: 1, backgroundColor: '#FFFF00', counter: 0 }
   ])
@@ -60,8 +60,8 @@ const CirclesProvider = ({ children }) => {
   const circleInfo = {
     circles,
     handleCounter,
-    handleDuplicate
-    // users: usersData
+    handleDuplicate,
+    usersData
   }
   return (
     <CirclesContext.Provider value={circleInfo}>
